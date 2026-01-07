@@ -32,7 +32,7 @@ data_europecup = (
         [
             "player",
             "equipo",
-            "minutes",
+            pl.col("minutes").alias("min"),
             pl.col("PTS").alias("pts"),
             pl.col("REB").alias("reb"),
             pl.col("AS").alias("ast"),
@@ -42,6 +42,21 @@ data_europecup = (
             pl.col("PF").alias("fa"),
             pl.col("EFF").alias("val"),
             pl.col("PM").alias("mm"),
+        ]
+    )
+    .group_by(["player", "equipo"])
+    .agg(
+        [
+            pl.col("min").mean(),
+            pl.col("pts").mean(),
+            pl.col("reb").mean(),
+            pl.col("ast").mean(),
+            pl.col("br").mean(),
+            pl.col("bp").mean(),
+            pl.col("tap").mean(),
+            pl.col("fa").mean(),
+            pl.col("mm").mean(),
+            pl.col("val").mean(),
         ]
     )
     .join(clubs, on="equipo")

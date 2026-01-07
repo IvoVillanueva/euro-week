@@ -2,7 +2,7 @@ from great_tables import GT, md
 import polars as pl
 from selenium import webdriver
 from PIL import Image, ImageOps
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 import os
 
 # Importar los datos de los otros scripts
@@ -11,9 +11,10 @@ from eurocup import df_partidos_eurocup
 from fiba_championsleague import data_championsleague
 from fiba_europecup import data_europecup
 
-# Rutas de salida
-OUTPUT_DIR = "../png"
-OUTPUT_FILE = "desarrollo_europeo.png"
+# directorios
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUTPUT_DIR = os.path.join(BASE_DIR, "png")
+OUTPUT_FILE = "desarrollo_europeo_py.png"
 
 # Crear directorio png si no existe
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -24,6 +25,7 @@ lunes = hoy - timedelta(days=hoy.weekday())
 viernes = lunes + timedelta(days=4)
 fecha_min = lunes.strftime("%d/%m")
 fecha_max = viernes.strftime("%d/%m")
+semana = date.today().isocalendar().week
 
 # Caption
 twitter = "<span style='color:#000000;font-family: \"Font Awesome 6 Brands\"'>&#xE61A;</span>"
@@ -156,11 +158,8 @@ table = theme_savant(
     .tab_source_note(md(caption))
 )
 
-# Guardar
 table.save(f"{OUTPUT_DIR}/{OUTPUT_FILE}")
 
 img = Image.open(f"{OUTPUT_DIR}/{OUTPUT_FILE}")
 img_out = ImageOps.expand(img, border=100, fill="white")
-img_out.save(f"{OUTPUT_DIR}/desarrollo_europeo_margen_py.png")
-
-print("Gráfico generado exitosamente")
+img_out.save(f"{OUTPUT_DIR}/desarrollo_europeo_margen_{semana}_.png")
