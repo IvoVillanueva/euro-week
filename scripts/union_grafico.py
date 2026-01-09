@@ -115,14 +115,6 @@ tbl_df = (
 # Crear tabla
 table = theme_savant(
     GT(tbl_df)
-    .tab_style(
-        style=md("""
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
-</style>
-"""),
-        locations="table"
-    )
     .cols_label(
         combo_img="",
         combo="",
@@ -156,7 +148,11 @@ table = theme_savant(
     .opt_row_striping(row_striping=True)
     .tab_header(
         title=md(
-            f"<div style='display: flex; align-items:center; gap:12px;'>"
+            f"
+            <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+        </style>
+        <div style='display: flex; align-items:center; gap:12px;'>"
             "<img src='https://supermanager.acb.com/assets/images/logo.svg' style='width:144px; height:144px;'/>"
             "<div style='display:flex; flex-direction: column; justify-content: center;'>"
             "<div style='font-weight:600; font-size:68px; line-height:1.2; text-align:left;'>Desarrollo Europeo</div>"
