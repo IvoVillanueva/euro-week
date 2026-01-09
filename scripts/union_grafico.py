@@ -147,20 +147,26 @@ table = theme_savant(
     .fmt_number(columns=["min", "val"], decimals=0)
     .opt_row_striping(row_striping=True)
     .tab_header(
-        title=md(
-            f"
-            <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
-        </style>
-        <div style='display: flex; align-items:center; gap:12px;'>"
-            "<img src='https://supermanager.acb.com/assets/images/logo.svg' style='width:144px; height:144px;'/>"
-            "<div style='display:flex; flex-direction: column; justify-content: center;'>"
-            "<div style='font-weight:600; font-size:68px; line-height:1.2; text-align:left;'>Desarrollo Europeo</div>"
-            "<div style='font-weight:400; font-size:35px; color:#8C8C8C; line-height:1.2; text-align:left;'>"
-            f"Medias Desde el {fecha_min} al {fecha_max}"
-            "</div></div></div>"
-        )
+    title=md(
+        f"""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+</style>
+
+<div style='display: flex; align-items:center; gap:12px;'>
+  <img src='https://supermanager.acb.com/assets/images/logo.svg' style='width:144px; height:144px;'/>
+  <div style='display:flex; flex-direction: column; justify-content: center;'>
+    <div style='font-weight:600; font-size:68px; line-height:1.2; text-align:left;'>
+      Desarrollo Europeo
+    </div>
+    <div style='font-weight:400; font-size:35px; color:#8C8C8C; line-height:1.2; text-align:left;'>
+      Medias Desde el {fecha_min} al {fecha_max}
+    </div>
+  </div>
+</div>
+"""
     )
+)
     .tab_source_note(md(caption))
 )
 
