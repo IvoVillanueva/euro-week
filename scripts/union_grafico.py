@@ -34,7 +34,7 @@ cleanshot = "<span style='font-weight:bold;'>*Visita https://www.thecleanshot.co
 caption = f"""
 **Datos**: *@EuroLeague @EuroCup @FIBAEuropeCup @BasketballCL* •
 **Gráfico**: *Ivo Villanueva* • {twitter} {tweetelcheff} <img src='https://substack.com/img/substack.png'
-     style='height:40px;width:40px;vertical-align:middle;'> {cleanshot}
+     style='height:40px;width:40px;vertical-align:middle;'/> {cleanshot}
 """
 
 
