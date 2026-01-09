@@ -30,10 +30,10 @@ semana = date.today().isocalendar().week
 # Caption
 twitter = "<span style='color:#000000;font-family: \"Font Awesome 6 Brands\"'>&#xE61A;</span>"
 tweetelcheff = "<span style='font-weight:bold;'>*@elcheff*</span>"
-cleanshot = "<span style='font-weight:bold;'>*Visita thecleanshot.com*</span>"
+cleanshot = "<span style='font-weight:bold;'>*Visita thecleanshot.com* </span>"
 caption = f"""
 **Datos**: *@EuroLeague @EuroCup @FIBAEuropeCup @BasketballCL* •
-**Gráfico**: *Ivo Villanueva* • {twitter} {tweetelcheff}
+**Gráfico**: *Ivo Villanueva* • {twitter} {tweetelcheff} •  {cleanshot}
 """
 
 
@@ -169,7 +169,7 @@ table = theme_savant(
 )
  .tab_source_note(
     md(
-        f"""{caption} <img src='https://supermanager.acb.com/assets/images/logo.svg' style='width:14px; height:14px;'/>"""
+        f"""{caption}  <img src='https://substack.com/img/substack.png' style='width:34px; height:34px;'/>"""
     )
 )
 )
