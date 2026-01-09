@@ -28,13 +28,13 @@ fecha_max = viernes.strftime("%d/%m")
 semana = date.today().isocalendar().week
 
 # Caption
-twitter = "<span style='color:#c04719'>&#x1D54F;</span>"
+twitter = "<span style='color:#c04719;font-size: 20px;'>&#x1D54F;</span>"
 tweetelcheff = "<span style='font-weight:bold;'>*@elcheff*</span>"
 cleanshot = "<span style='font-weight:bold;'>*Visita thecleanshot.com* </span>"
 caption = f"""
 **Datos**: *@EuroLeague @EuroCup @FIBAEuropeCup @BasketballCL* •
 **Gráfico**: *Ivo Villanueva* • {twitter} {tweetelcheff} •&nbsp;&nbsp;<img src='https://raw.githubusercontent.com/IvoVillanueva/data/refs/heads/main/elcheff_thecleanshotlogo.png'
-style='width:20px; height:20px;vertical-align:middle;'>&nbsp;&nbsp;{cleanshot}
+style='width:25px; height:25px;'>&nbsp;&nbsp;{cleanshot}
 """
 
 
