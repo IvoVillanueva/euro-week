@@ -50,12 +50,14 @@
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/IvoVillanueva/euro-week.git
+git clone <repository-url>
 cd euro-week
 
 # Instalar las dependencias necesarias
 pip install pandas polars great-tables selenium pillow
 ```
+
+> **Nota**: Reemplaza `<repository-url>` con la URL de tu fork o clon del repositorio.
 
 ### Dependencias Principales
 
@@ -131,11 +133,17 @@ euro-week/
 
 ## 🎨 Ejemplo de Salida
 
-El proyecto genera gráficos profesionales como este:
+El proyecto genera gráficos profesionales con:
 
-![Ejemplo de Gráfico](png/desarrollo_europeo_py.png)
+- 📊 Calendario semanal de lunes a viernes
+- 🎨 Logos y colores corporativos de cada equipo
+- 🏆 Separación por competición europea
+- 📅 Fechas y horarios de los partidos
+- 🌐 Información de rival y localización (Local/Visitante)
 
-*Gráfico mostrando el calendario semanal de equipos españoles en competiciones europeas*
+Los gráficos se guardan en la carpeta `png/` con formato PNG listo para compartir.
+
+> **Ejemplo**: Después de ejecutar `union_grafico.py`, encontrarás el gráfico en `png/desarrollo_europeo_py.png`
 
 ---
 
@@ -250,9 +258,9 @@ MIT License - Copyright (c) 2025 Iván Villanueva Sabalete
 
 ## 📊 Estado del Proyecto
 
-![Última Actualización](https://img.shields.io/badge/Última_Actualización-Semana_01_2026-blue?style=for-the-badge)
-![Competiciones](https://img.shields.io/badge/Competiciones-4-orange?style=for-the-badge)
-![Equipos](https://img.shields.io/badge/Equipos_Españoles-10+-green?style=for-the-badge)
+![Mantenimiento Activo](https://img.shields.io/badge/Mantenimiento-Activo-success?style=for-the-badge)
+![Competiciones](https://img.shields.io/badge/Competiciones_Europeas-4-orange?style=for-the-badge)
+![Actualización](https://img.shields.io/badge/Actualización-Semanal-blue?style=for-the-badge)
 
 ---
 
