@@ -115,6 +115,14 @@ tbl_df = (
 # Crear tabla
 table = theme_savant(
     GT(tbl_df)
+    .tab_style(
+        style=md("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+</style>
+"""),
+        locations="table"
+    )
     .cols_label(
         combo_img="",
         combo="",
