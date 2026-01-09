@@ -173,7 +173,7 @@ table = theme_savant(
         style="height:40px;width:40px;vertical-align:middle;"/>"""
     )
 )
-
+)
 table.save(f"{OUTPUT_DIR}/{OUTPUT_FILE}")
 
 img = Image.open(f"{OUTPUT_DIR}/{OUTPUT_FILE}")
