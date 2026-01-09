@@ -30,11 +30,12 @@ semana = date.today().isocalendar().week
 # Caption
 twitter = "<span style='color:#000000;font-family: \"Font Awesome 6 Brands\"'>&#xE61A;</span>"
 tweetelcheff = "<span style='font-weight:bold;'>*@elcheff*</span>"
-insta = "<span style='color:#E1306C;font-family: \"Font Awesome 6 Brands\"'>&#xE055;</span>"
-instaelcheff = "<span style='font-weight:bold;'>*@sport_iv0*</span>"
-github = "<span style='color:#000000;font-family: \"Font Awesome 6 Brands\"'>&#xF092;</span>"
-githubelcheff = "<span style='font-weight:bold;'>*IvoVillanueva*</span>"
-caption = f"**Datos**: *@EuroLeague @EuroCup @FIBAEuropeCup @BasketballCL* • **Gráfico**: *Ivo Villanueva* • {twitter} {tweetelcheff} • {insta} {instaelcheff} • {github} {githubelcheff}"
+cleanshot = "<span style='font-weight:bold;'>*Visita https://www.thecleanshot.com*</span>"
+caption = f"""
+**Datos**: *@EuroLeague @EuroCup @FIBAEuropeCup @BasketballCL* •
+**Gráfico**: *Ivo Villanueva* • {twitter} {tweetelcheff} <img src='https://substack.com/img/substack.png'
+     style='height:40px;width:40px;vertical-align:middle;'> {cleanshot}
+"""
 
 
 # Funciones
