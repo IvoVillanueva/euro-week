@@ -159,6 +159,8 @@ table = theme_savant(
     )
     .tab_source_note(md(caption))
 )
+# 👉 FIX selenium / chromium
+os.environ["GT_CHROME_BIN"] = "/usr/bin/chromium"
 
 table.save(f"{OUTPUT_DIR}/{OUTPUT_FILE}")
 
