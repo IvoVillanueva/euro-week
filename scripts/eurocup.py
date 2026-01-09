@@ -52,7 +52,6 @@ data_eurocup = (
     )
     .filter(
         (pl.col("team_name").is_in(["BAXI Manresa"]))
-        & (pl.col("ronda") == pl.col("ronda").max())
         & (pl.col("semana") == semana)
     )
     .select(
@@ -85,7 +84,7 @@ data_eurocup = (
 df_partidos_eurocup = (
     data_eurocup.group_by(["player", "equipo"])
     .agg(
-        [
+        [   pl.col("partido").n_unique().alias("jug"),
             pl.col("min").mean(),
             pl.col("pts").mean(),
             pl.col("reb").mean(),

@@ -46,7 +46,7 @@ data_europecup = (
     )
     .group_by(["player", "equipo"])
     .agg(
-        [
+        [   pl.col("player").n_unique().alias("jug"),
             pl.col("min").mean(),
             pl.col("pts").mean(),
             pl.col("reb").mean(),

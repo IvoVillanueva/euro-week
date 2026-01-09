@@ -78,7 +78,6 @@ data_euroleague = (
                 ["Baskonia Kosner", "Real Madrid", "Barça", "Valencia Basket"]
             )
         )
-        & (pl.col("ronda") == pl.col("ronda").max())
         & (pl.col("semana") == semana)
     )
     .select(
@@ -109,7 +108,7 @@ data_euroleague = (
 df_partidos_euroleague = (
     data_euroleague.group_by(["player", "equipo"])
     .agg(
-        [
+        [   pl.col("partido").n_unique().alias("jug"),    
             pl.col("min").mean(),
             pl.col("pts").mean(),
             pl.col("reb").mean(),

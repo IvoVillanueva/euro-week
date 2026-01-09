@@ -98,6 +98,7 @@ tbl_df = (
     .select(
         "combo_img",
         "combo",
+        "jug",
         "min",
         "pts",
         "reb",
@@ -117,6 +118,7 @@ table = theme_savant(
     .cols_label(
         combo_img="",
         combo="",
+        jug="JUG",
         min="MIN",
         pts="PTS",
         reb="REB",
@@ -147,7 +149,7 @@ table = theme_savant(
     .tab_header(
         title=md(
             f"<div style='display: flex; align-items:center; gap:12px;'>"
-            "<img src='https://raw.githubusercontent.com/IvoVillanueva/SUPERMANAGER-BROKER-GENERAL/refs/heads/main/png/LogoSMNavidadAzulmarino.png' style='width:144px; height:144px;'/>"
+            "<img src='https://supermanager.acb.com/assets/images/logo.svg' style='width:144px; height:144px;'/>"
             "<div style='display:flex; flex-direction: column; justify-content: center;'>"
             "<div style='font-weight:600; font-size:68px; line-height:1.2; text-align:left;'>Desarrollo Europeo</div>"
             "<div style='font-weight:400; font-size:35px; color:#8C8C8C; line-height:1.2; text-align:left;'>"
