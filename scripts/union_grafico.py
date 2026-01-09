@@ -28,7 +28,7 @@ fecha_max = viernes.strftime("%d/%m")
 semana = date.today().isocalendar().week
 
 # Caption
-twitter <- "<span style='color:#c04719'>&#x1D54F;</span>"
+twitter = "<span style='color:#c04719'>&#x1D54F;</span>"
 tweetelcheff = "<span style='font-weight:bold;'>*@elcheff*</span>"
 cleanshot = "<span style='font-weight:bold;'>*Visita thecleanshot.com* </span>"
 caption = f"""
