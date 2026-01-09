@@ -33,8 +33,7 @@ tweetelcheff = "<span style='font-weight:bold;'>*@elcheff*</span>"
 cleanshot = "<span style='font-weight:bold;'>*Visita thecleanshot.com*</span>"
 caption = f"""
 **Datos**: *@EuroLeague @EuroCup @FIBAEuropeCup @BasketballCL* •
-**Gráfico**: *Ivo Villanueva* • {twitter} {tweetelcheff} <img src='https://substack.com/img/substack.png'
-     style='height:40px;width:40px;vertical-align:middle;'/> {cleanshot}
+**Gráfico**: *Ivo Villanueva* • {twitter} {tweetelcheff}
 """
 
 
@@ -168,7 +167,8 @@ table = theme_savant(
 """
     )
 )
-    .tab_source_note(md(caption))
+    .tab_source_note(md(caption, f"""<img src='https://substack.com/img/substack.png'
+     style='height:40px;width:40px;vertical-align:middle;'/>""" ))
 )
 
 table.save(f"{OUTPUT_DIR}/{OUTPUT_FILE}")
