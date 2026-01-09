@@ -169,8 +169,7 @@ table = theme_savant(
 )
  .tab_source_note(
     md(
-        f"""{caption} <img src='https://supermanager.acb.com/assets/images/logo.svg'
-        style='height:40px;width:40px;vertical-align:middle;'/>"""
+        f"""{caption} <img src='https://supermanager.acb.com/assets/images/logo.svg' style='width:14px; height:14px;'/>"""
     )
 )
 )
