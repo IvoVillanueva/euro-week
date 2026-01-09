@@ -50,14 +50,14 @@
 
 ```bash
 # Clonar el repositorio
-git clone <repository-url>
+git clone https://github.com/IvoVillanueva/euro-week.git
 cd euro-week
 
 # Instalar las dependencias necesarias
 pip install pandas polars great-tables selenium pillow
 ```
 
-> **Nota**: Reemplaza `<repository-url>` con la URL de tu fork o clon del repositorio.
+> **Nota para Forks**: Si has hecho fork del repositorio, usa la URL de tu fork en lugar de la URL original.
 
 ### Dependencias Principales
 
