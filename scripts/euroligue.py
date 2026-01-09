@@ -72,6 +72,23 @@ data_euroleague = (
             .otherwise(0)
         ).alias("minutes"),
     )
+    .with_columns(
+        # --- nombres correctos ---
+        pl.when(pl.col("player") == "Xabi Lopez-Arostegui")
+        .then(pl.lit("Xabier López-Arostegui"))
+        .when(pl.col("player") == "Willy Hernangomez")
+        .then(pl.lit("Willy Hernangómez"))
+        .when(pl.col("player") == "Walter Tavares")
+        .then(pl.lit("Edy Tavares"))
+        .when(pl.col("player") == "Facundo Campazzo")
+        .then(pl.lit("Facu Campazzo"))
+        .when(pl.col("player") == "Nicolas Laprovittola")
+        .then(pl.lit("Nico Laprovittola"))
+        .when(pl.col("player") == "Andres Feliz")
+        .then(pl.lit("Andrés Feliz"))
+        .otherwise(pl.col("player"))
+        .alias("player")
+    )
     .filter(
         (
             pl.col("team_name").is_in(
@@ -108,7 +125,8 @@ data_euroleague = (
 df_partidos_euroleague = (
     data_euroleague.group_by(["player", "equipo"])
     .agg(
-        [   pl.col("partido").n_unique().alias("jug"),    
+        [
+            pl.col("partido").n_unique().alias("jug"),
             pl.col("min").mean(),
             pl.col("pts").mean(),
             pl.col("reb").mean(),
