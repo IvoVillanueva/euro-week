@@ -167,8 +167,11 @@ table = theme_savant(
 """
     )
 )
-    .tab_source_note(md(caption, f"""<img src='https://substack.com/img/substack.png'
-     style='height:40px;width:40px;vertical-align:middle;'/>""" ))
+ .tab_source_note(
+    md(
+        f"""{caption} <img src="https://substack.com/img/substack.png"
+        style="height:40px;width:40px;vertical-align:middle;"/>"""
+    )
 )
 
 table.save(f"{OUTPUT_DIR}/{OUTPUT_FILE}")
