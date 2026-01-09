@@ -169,8 +169,8 @@ table = theme_savant(
 )
 .tab_source_note(
     md(
-        f"""{caption} <img src="https://raw.githubusercontent.com/IvoVillanueva/data/refs/heads/main/elcheff_thecleanshotlogo.png"
-        style="width:20px;height:20px;vertical-align:middle;"/>"""
+        f"""{caption} <img src='https://raw.githubusercontent.com/IvoVillanueva/data/refs/heads/main/elcheff_thecleanshotlogo.png'
+        style='width:20px;height:20px;'/>"""
     )
 )
 )
