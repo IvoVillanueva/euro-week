@@ -12,7 +12,7 @@ clubs = pl.read_csv(
     .otherwise(pl.col("equipo"))
     .alias("equipo"),
 
-    pl.when(pl.col("equipo") == "Joventut Badalona")
+    pl.when(pl.col("equipo") == "Asisa Joventut")
     .then("https://static.acb.com/img/www/clubes2026/202526AsisaJoventutLogoNegativo.png")
     .otherwise(pl.col("logo"))
     .alias("logo")
