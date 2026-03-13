@@ -6,6 +6,16 @@ semana = date.today().isocalendar().week
 
 clubs = pl.read_csv(
     "https://raw.githubusercontent.com/IvoVillanueva/acb2026/refs/heads/main/logos_calendario/clubs2026.csv"
+).with_columns(
+    pl.when(pl.col("equipo") == "Joventut Badalona")
+    .then("Asisa Joventut")
+    .otherwise(pl.col("equipo"))
+    .alias("equipo"),
+
+    pl.when(pl.col("equipo") == "Joventut Badalona")
+    .then("https://static.acb.com/img/www/clubes2026/202526AsisaJoventutLogoNegativo.png")
+    .otherwise(pl.col("logo"))
+    .alias("logo")
 )
 
 data_championsleague = (
