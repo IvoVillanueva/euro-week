@@ -25,7 +25,7 @@ data_championsleague = (
             pl.col("equipo").is_in(
                 [
                     "Dreamland Gran Canaria",
-                    "Joventut Badalona",
+                    "Asisa Joventut",
                     "La Laguna Tenerife",
                     "Unicaja",
                 ]
